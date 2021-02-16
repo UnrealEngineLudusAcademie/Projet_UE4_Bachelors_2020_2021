@@ -26,7 +26,20 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable, Category = "Move")
+	void MoveForwarBackward(float flt_scale);
+
+	UFUNCTION(BlueprintCallable, Category = "Move")
+	void MoveLeftRight(float flt_scale);
+
+	UFUNCTION(BlueprintCallable, Category = "Move")
+	void Turn(float flt_scale);
+
+	UFUNCTION(BlueprintCallable, Category = "Move")
+	void LookUp(float flt_scale);
+
 	
+	void Jump()override;
 
 
 

@@ -30,9 +30,51 @@ void ACCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+
+
+
 	
 
 }
+
+void ACCharacter::MoveForwarBackward(float flt_scale)
+{
+
+	AActor* actor = GetOwner();
+	AddMovementInput(actor->GetActorForwardVector(),flt_scale);
+
+}
+
+void ACCharacter::MoveLeftRight(float flt_scale)
+{
+
+	AActor* actor = GetOwner();
+	AddMovementInput(actor->GetActorRightVector(), flt_scale);
+}
+
+void ACCharacter::Turn(float flt_scale)
+{
+
+	AddControllerYawInput(flt_scale);
+}
+
+void ACCharacter::LookUp(float flt_scale)
+{
+	AddControllerPitchInput(flt_scale);
+}
+
+void ACCharacter::Jump()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Methode Jump classe CCharactere"))
+
+	Super::Jump();
+
+}
+
+
+
+
+
 
 
 
