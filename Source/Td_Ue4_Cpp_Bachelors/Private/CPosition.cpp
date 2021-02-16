@@ -10,6 +10,9 @@ UCPosition::UCPosition()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
+	
+
+
 	// ...
 }
 
@@ -37,8 +40,16 @@ void UCPosition::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompo
 	FString FName=GetOwner()->GetName();
 	FString FPosition=GetOwner()->GetTransform().GetLocation().ToString();
 
-	UE_LOG(LogTemp, Warning, TEXT("Nom : %s , Position : %s"), *FName, *FPosition);
+	//UE_LOG(LogTemp, Warning, TEXT("Nom : %s , Position : %s"), *FName, *FPosition);
 
+	
+
+
+}
+
+void UCPosition::print_log()
+{
+	UE_LOG(LogTemp, Warning, TEXT("flt value : %f"), flt_value);
 
 }
 
